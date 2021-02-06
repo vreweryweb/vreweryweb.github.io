@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link href="https://fonts.googleapis.com/css?family=Oswald:300" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Lato:400i" rel="stylesheet">
+
+	<link rel="stylesheet" href="css/reset.css"> <!-- CSS reset -->
+	<link rel="stylesheet" href="css/style.css"> <!-- Resource style -->
+	<script src="js/modernizr.js"></script> <!-- Modernizr -->
+  	
+	<title>virtual reality</title>
+	<script src="js/jquery-2.1.4.js"></script>
+<script type="text/javascript" src="js/jquery.imgpreload.min.js"></script>
+	<script type="text/javascript">
+
+		jQuery(function($)
+		{
+			$('#status, #domstatus').append('<li> dom ready </li>');
+		});
+
+		// cache buster
+		var t = (new Date).getTime();
+
+		var the_images = [];
+
+		the_images.push( 'http://farm7.static.flickr.com/6195/6130724163_9ec1db80c7_b.jpg');
+
+		the_images.push( 'http://farm7.static.flickr.com/6188/6131273938_c711a28586_b.jpg' );
+
+
+		jQuery.imgpreload(the_images,
+		{
+			// each: function()
+			// {
+			// 	var pattern = new RegExp( "i=(\\d)", "gi" );
+
+			// 	var m = pattern.exec($(this).attr('src'));
+
+			// 	var status = $(this).data('loaded')?'success':'error';
+
+			// 	$('#status').append('<li>' + m[1] + ': ' + $(this).attr('src') + ' ' + status + '</li>');
+			// },
+			all: function()
+			{	
+				$('.l-wrapper').css("opacity","0");
+				$('.cd-main').css("opacity","1");
+				$('#status').append('<li> all images loaded </li>');
+			}
+		});
+
+	</script>
+</head>
+<body>
+<div class="l-wrapper "> <div class="loader">Loading...</div></div>
+<a href="http://www.vrewery.com/blog/" class="blogbtn">Lab.</a>
+<div class="menu-icon"><span></span>
+  <span></span>
+  <span></span>
+  <span></span></div>
+	<a href="index.html#fourthPage" class="backbtn"><div class="icon"></div><div>back</div></a>
+	<nav class="cd-side-navigation">
+		<ul>
+			<li>
+				<a href="project1.html" data-menu="project1">
+							<span>01</span>		<h3>Data Visualisation</h3> <p class="label">virtual reality</p>
+				</a>
+			</li>
+
+			<li>
+				<a href="project2.html" data-menu="project2">
+					<span>02</span>		<h3>Amusing Rides</h3> <p class="label">virtual reality</p>
+				</a>
+			</li>
+
+			<li>
+				<a href="project3.html" class="selected" data-menu="project3">
+					<span>03</span>		<h3>Truck Explorer</h3> <p class="label">virtual reality</p>
+				</a>
+			</li>
+		</ul>
+		
+	</nav> <!-- .cd-side-navigation -->
+	
+	<main class="cd-main">
+		<section class="cd-section index visible">
+			<header ><!-- <IMG SRC="images/image3_1.gif"> -->
+			
+			<div class="heroblock">
+				<span class="barsm"></span>
+				<span class="barmd"></span><BR>
+				<span></span>
+				<h2>TruCK</h2>
+				<h2>EXpLorEr</h2>
+				<p>VR enabled explorer is a concept pitch aimed at facilitating the user explore a truck and know the specs. Applications in the lines of VR Truck explorer can be used in pre-sales/marketing to potential target customer who can explore a product without visiting a physical showroom.</p>
+			</div>
+				<!-- <div class="cd-title">
+
+					<h2>Animated Page Transition #2</h2>
+					<span>Some text here</span>
+				</div>
+ -->
+				<a href="#index-content" class="cd-scroll"><div>Scroll Down</div><div class="icon"></div></a>
+			</header>
+
+			<div class="cd-content" id="index-content">
+				<p>
+					The target customers of a truck company might be living in tier 2 cities and towns where the company may not have any showroom to showcase their product offerings. For the company, setting up a physical showroom requires lot of investment and operation costs. How about using VR to showcase their products and give a showroom experience for potential buyers? Using virtual reality, the viewer can visualize the truck in scale and might also see through various configurations along with features/specification explanations giving an immersive experience.
+				</p><BR> 
+				<img class="visual" src="images/image3_3.png">
+				<img class="visual" src="images/image3_4.png">
+				<img class="visual" src="images/project3_3.gif">
+				
+
+			</div> <!-- .cd-content -->
+		</section> <!-- .cd-section -->
+	</main> <!-- .cd-main -->
+
+	<div id="cd-loading-bar" data-scale="1" class="index"></div> <!-- lateral loading bar -->
+
+<script type="text/javascript">
+		$( ".menu-icon" ).click(function() {
+			$( ".menu-icon" ).toggleClass('open');
+  			$( ".cd-side-navigation" ).toggle();
+  		});
+  		
+  		// $( ".cd-side-navigation a" ).click(function() {
+  		// 	$( ".cd-side-navigation" ).toggle("fast");
+  		// });
+	</script>
+<!-- <script src="js/velocity.min.js"></script> -->
+<script src="js/jquery.vide.min.js"></script>
+<script>
+ $(document).ready(function () {
+   $("header").vide('http://vrewery.com/videos/tc.mp4'); // Non declarative initialization
+ 
+   // var instance = $(document.body).data('vide'); // Get the instance
+   // var video = instance.getVideoObject(); // Get the video object
+   // instance.destroy(); // Destroy instance
+ });
+</script>
+<!-- <script src="js/main.js"></script> --> <!-- Resource jQuery -->
+</body>
+</html>

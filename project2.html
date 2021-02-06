@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link href="https://fonts.googleapis.com/css?family=Oswald:300" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Lato:400i" rel="stylesheet">
+
+	<link rel="stylesheet" href="css/reset.css"> <!-- CSS reset -->
+	<link rel="stylesheet" href="css/style.css"> <!-- Resource style -->
+	<script src="js/modernizr.js"></script> <!-- Modernizr -->
+  	
+	<title>Amusing Rides</title>
+	<script src="js/jquery-2.1.4.js"></script>
+<script type="text/javascript" src="js/jquery.imgpreload.min.js"></script>
+	<script type="text/javascript">
+
+		jQuery(function($)
+		{
+			$('#status, #domstatus').append('<li> dom ready </li>');
+		});
+
+		// cache buster
+		var t = (new Date).getTime();
+
+		var the_images = [];
+
+		the_images.push( 'http://farm7.static.flickr.com/6195/6130724163_9ec1db80c7_b.jpg?i=1&t=' + t );
+
+		the_images.push( 'http://farm7.static.flickr.com/6188/6131273938_c711a28586_b.jpg?i=2&t=' + t );
+
+		the_images.push( 'http://farm7.static.flickr.com/6065/6125251344_c6f089b09f_b.jpg?i=3&t=' + t );
+
+
+		jQuery.imgpreload(the_images,
+		{
+			// each: function()
+			// {
+			// 	var pattern = new RegExp( "i=(\\d)", "gi" );
+
+			// 	var m = pattern.exec($(this).attr('src'));
+
+			// 	var status = $(this).data('loaded')?'success':'error';
+
+			// 	$('#status').append('<li>' + m[1] + ': ' + $(this).attr('src') + ' ' + status + '</li>');
+			// },
+			all: function()
+			{	$('.l-wrapper').css("opacity","0");
+				$('.cd-main').css("opacity","1");
+				$('#status').append('<li> all images loaded </li>');
+			}
+		});
+
+	</script>
+</head>
+<body>
+<div class="l-wrapper "> <div class="loader">Loading...</div></div>
+<a href="http://www.vrewery.com/blog/" class="blogbtn">Lab.</a>
+<div class="menu-icon"><span></span>
+  <span></span>
+  <span></span>
+  <span></span></div>
+	<a href="index.html#fourthPage" class="backbtn"><div class="icon"></div><div>back</div></a>
+	<nav class="cd-side-navigation">
+		<ul>
+			<li>
+				<a href="project1.html" data-menu="project1">
+							<span>01</span>		<h3>Data Visualisation</h3> <p class="label">virtual reality</p>
+				</a>
+			</li>
+
+			<li>
+				<a href="project2.html" class="selected" data-menu="project2">
+					<span>02</span>		<h3>Amusing Rides</h3> <p class="label">virtual reality</p>
+				</a>
+			</li>
+
+			<li>
+				<a href="project3.html" data-menu="project3">
+					<span>03</span>		<h3>Truck Explorer</h3> <p class="label">virtual reality</p>
+				</a>
+			</li>
+		</ul>
+		
+	</nav> <!-- .cd-side-navigation -->
+	
+	<main class="cd-main">
+		<section class="cd-section index visible">
+			<header><IMG SRC="images/image2_1.png">
+			<div class="heroblock">
+				<span class="barsm"></span>
+				<span class="barmd"></span><BR>
+				<span></span>
+				<h2>AMuSING</h2>
+				<h2>rIDES</h2>
+				<p>A concept pitch for a VR application in amusement theme parks. The brief is to come up with unique experiences that leverage the motion, forces of real world physics while allowing you to witness alternative new worlds. The concepts also include hardware rig setup ideas that will add to the overall user experience.</p>
+			</div>
+				<!-- <div class="cd-title">
+
+					<h2>Animated Page Transition #2</h2>
+					<span>Some text here</span>
+				</div>
+ -->
+				<a href="#index-content" class="cd-scroll"><div>Scroll Down</div><div class="icon"></div></a>
+			</header>
+
+			<div class="cd-content" id="index-content">
+				<p><BR>By combining VR headset with hardware rigs, a high level of user immersion is achieved. This is evident from the use of VR headsets in existing roller coaster rides. The aim of this design sprint was to come out with quick ideas and illustrate how VR can change the amusement park industry. Experiences like being in space, roller coasting through the solar system, being in the shoes of your favourite super hero, navigating a sci-fi/fantasy maze are all possible in VR world.
+				</p><BR>
+				<img class="visual" src="images/project2_1.png">
+				<img class="visual" src="images/project2_2.png"><BR>
+				<iframe class="visual1" width="854" height="480" src="https://www.youtube.com/embed/bdu02pYjuPY" frameborder="0" allowfullscreen></iframe><BR>
+				<img class="visual" src="images/project2_4.png">
+				<img class="visual" src="images/project2_5.png">
+				<img class="visual" src="images/project2_6.png">
+			</div> <!-- .cd-content -->
+		</section> <!-- .cd-section -->
+	</main> <!-- .cd-main -->
+
+	<div id="cd-loading-bar" data-scale="1" class="index"></div> <!-- lateral loading bar -->
+
+<script type="text/javascript">
+		$( ".menu-icon" ).click(function() {
+			$( ".menu-icon" ).toggleClass('open');
+  			$( ".cd-side-navigation" ).toggle();
+  		});
+  		// $( ".cd-side-navigation a" ).click(function() {
+  		// 	$( ".cd-side-navigation" ).toggle("fast");
+  		// });
+	</script>
+<script src="js/velocity.min.js"></script>
+<!-- <script src="js/main.js"></script> --> <!-- Resource jQuery -->
+</body>
+</html>
