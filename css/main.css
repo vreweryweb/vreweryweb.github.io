@@ -138,6 +138,7 @@ margin-bottom: 22px;
     height: 100%;
     color: #fff;
     border:1px solid rgb(53, 53, 53);
+    padding: 1.5%;
 }
 .layer .inner::before{
     content: '';
@@ -357,15 +358,18 @@ font-weight: normal;
 }
 p.eg{
     font-family: 'Lato';
-    font-style:normal;
-    font-size: 16px;
-    color: #fff;
+    font-style:italic;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 20px;
+    color: rgb(117, 117, 117);
     text-align: left;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
     margin-top: 5px;
 /*letter-spacing: 0.03em;*/
 }
+
 .eg span:last-child{
     padding-left: 12px;
 }
