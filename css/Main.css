@@ -655,7 +655,7 @@ z-index: 12;
 left: 0;
 top: 16px;
 width: 30px;
-background-image: url('images/beaker.png');
+background-image: url('../Images/Icons-Logo/beaker.webp');
 background-size: cover;
 opacity: 0;
 }
@@ -819,15 +819,19 @@ width: 24px;
 height: 24px;
 padding: 6px;
 }
-#section6 .copyright{
+
+/* Class for defining copyright information on last page */
+.copyright
+{
 position: absolute;
 font-family: 'Lato';
-font-weight: bold;
+font-weight:normal;
 font-size: 12px;
-color: #737373;
+color: #9b9b9b;
 transform: rotate(-90deg);
-bottom: 8%;
-left: -1.5em;
+bottom: 9%;
+left: -5em;
+z-index: 5;
 }
 #section3 .titlehead {
 position: absolute;
@@ -1018,7 +1022,7 @@ right: 0;
 height: 40px;
 margin:auto;
 top: 14px;
-background-image: url('../images/why.webp');
+background-image: url('../images/Icons-Logo/Logo/Logo_Static.webp');
 background-size: contain;
 
 }

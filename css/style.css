@@ -249,8 +249,10 @@ Navigation
 .cd-section header {
   position: relative;
   height: 100vh;
-  width: 100%;
-  b/*ackground-image: url('../images/image1_1.png');*/
+  width: 100%vw;
+  background-image: url('../images/image1_1.webp') ;
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
   overflow: hidden;
 }
 .cd-section.project2 header {
@@ -734,9 +736,11 @@ a.backbtn >div p{
     
     
   }
-  header img{
-    display: none;
-  }
+  
+  .full{
+    width: 100%;!important
+    height: auto;
+  } 
   .cd-content img{
     width: 100%;
   }
