@@ -14,8 +14,44 @@ src: url('../Fonts/Baron-Neue.otf') format("opentype");
 }
 .menu-burger{
 display: none;
+}
+h1 {
+    font-family: 'Baron Neue';
+    color: #e9c082;
+    font-size: 32px;
+    line-height: 21px;
+    display: inline-block;
+    margin-top: 54px;
+    padding-left: 20px;
 
 }
+h2{
+    font-family: 'Baron Neue';
+    color: #e9c082;
+    font-size: 32px;
+    line-height: 21px;
+    display: block;
+    margin-block-start: 35px;
+    margin-block-end: 20px;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px
+   
+
+}
+p{
+    font-size: 14px;
+    font-family: 'Lato';
+    font-weight:400;
+    color: #ddd;
+    font-style: normal;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding:0 24px;
+    text-align: center;
+    line-height: 20px;
+}
+
+
 .section{
     text-align:center;
     overflow: hidden;
@@ -68,19 +104,19 @@ margin-bottom: 4px;
 opacity: 1;
 transition: all 0.5s;
 }
-
-.who-text {
+/* repeated later at line 390 | Needs to be deleted */
+/* .who-text {
 width: 360px;
 font-family: 'Lato';
-font-style: italic;
+font-style:inherit;
 font-size: 14px;
 color: #ddd;
 padding: 0 20px;
 margin: 0 auto;
 margin-top: -30px;
-line-height: 14px;
+line-height: 20px;
 margin-bottom: 22px;
-}
+} */
  .layer{
     position: absolute;
     z-index: 4;
@@ -167,11 +203,11 @@ margin-bottom: 22px;
 position: relative;
 width:100%;
 height: 100%;
-text-align: center;
+/* text-align: center;
 color: #e9c082;
 font-family: 'Baron Neue';
 font-weight: bold;
-font-size: 28px;
+font-size: 28px; */
 display: table;
 border:1px solid rgb(82, 82, 82);
 }
@@ -298,7 +334,7 @@ padding-left: 20px;
     margin-top: 14px;
     margin-bottom: 2px;
     font-family: 'Lato';
-    font-style: italic;
+    font-style:normal;
     font-size: 18px;
     color: #CAAC7E;
     text-align: left;
@@ -311,7 +347,7 @@ font-weight: 100;
 }
 .layer .label + p{
     font-family: 'Lato';
-    font-style: italic;
+    font-style:normal;
     font-size: 16px;
     color: #fff;
     text-align: left;
@@ -320,12 +356,12 @@ font-weight: normal;
 }
 p.eg{
     font-family: 'Lato';
-    font-style: italic;
+    font-style:normal;
     font-size: 16px;
     color: #fff;
-    text-align: right;
-    padding-left: 25px;
-    padding-right: 34px;
+    text-align: left;
+    padding-left: 10px;
+    padding-right: 10px;
     margin-top: 5px;
 /*letter-spacing: 0.03em;*/
 }
@@ -350,13 +386,14 @@ padding-left: 1em;
 }
 .layer h3 + p{
     font-family: 'Lato';
-    font-size: 16px;
-    font-style: italic;
-    font-weight: 100;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 200;
     line-height: 20px;
     padding: 0 25px;
     color: #fff;
     text-align:center;
+    margin-top: 10px;
 }
 .viewmore{
     position: absolute;
@@ -385,19 +422,19 @@ padding-left: 1em;
 .layer .sublabel span{
 font-family: 'Lato';
 font-weight: 100;
-font-style: italic;
+font-style: normal;
 }
 .who-text{
     width: 360px;
     font-family: 'Lato';
-    font-style: italic;
+    font-style: normal;
     font-size: 14px;
 font-weight: 100;
     color: #ddd;
     padding: 0 20px;
     margin: 0 auto;
     margin-top: 20px;
-line-height: 14px;
+line-height: 20px;
 margin-bottom: 22px;
 }
 .wrapper{
@@ -452,7 +489,9 @@ margin-bottom: 22px;
     .square:hover + .downarw {
         opacity: 1;
     }
-
+.square p{
+    text-align: left;
+}
     .square .inner{
         position:relative;
         width:100%;
@@ -487,10 +526,10 @@ margin-bottom: 22px;
         color: #e9c082;
     }
     .square:nth-child(9) .tagline{
-  position: absolute;
+  position: relative;
   bottom: 5px;
   font-family: 'Baron Neue';
-  font-weight: bold;
+  font-weight:normal;
   font-style: normal;
   font-size: 14px;
   width: 100%;
@@ -498,9 +537,7 @@ margin-bottom: 22px;
   text-align: center;
   opacity: 0;
 }
-    .tagline span{
-        color: #e9c082;
-    }
+    
 .layer .tagline2 {
   font-family: 'Baron Neue';
   font-weight: bold;
@@ -523,8 +560,8 @@ margin-bottom: 22px;
 .layer  .para1 {
   font-family: 'Lato';
   font-weight: lighter;
-  font-style: italic;
-  font-size: 12px;
+  font-style: normal;
+  font-size: 14px;
   color: #fff;
   margin-top: 10px;
 }
@@ -532,24 +569,18 @@ margin-bottom: 22px;
 
       font-family: 'Baron Neue';
       font-size: 28px;
+      font-weight: bold;
       color: #ddd;
       cursor: pointer;
       line-height:60px;
-    }
+          }
     .square label + p{
-        text-align: center;
+        text-align: left;
         /*margin-top: 10px;*/
     }
-    .square p{
-        font-size: 16px;
-        font-family: 'Lato';
-  font-weight: 100;
-        color: #ddd;
-        font-style: italic;
-        margin-top: 0;
-        margin-bottom: 10px;
-        padding:0 24px;
-        text-align: left;
+   
+    .tagline span{
+        color: #e9c082;
     }
 #section1{
 
@@ -850,14 +881,14 @@ font-size: 16px;
   margin: auto;
 }
  #myGallery img{
-     margin-top: 20%;
+     margin-top: 15%;
   display:none;
   /*position:relative;*/
   width: 30%;
   height: auto;
 }
 #myGallery img.active{
-    margin-top: 20%;
+    margin-top: 15%;
     margin-bottom: 0px;
     margin-left: auto;
     margin-right: auto;
