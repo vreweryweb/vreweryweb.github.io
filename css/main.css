@@ -56,7 +56,9 @@ p{
     text-align:center;
     overflow: hidden;
     background-color: #000;
+
 }
+
     #myVideo{
     position: absolute;
     right: 0;
@@ -579,8 +581,6 @@ margin-bottom: 22px;
         color: #e9c082;
     }
 #section1{
-
-
   background-color: #000;
   text-align: left;
 }
