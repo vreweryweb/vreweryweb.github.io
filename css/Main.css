@@ -10,7 +10,7 @@ body{
 
 @font-face {
 font-family: 'Baron Neue' ;
-src: url('Fonts/Baron Neue.otf') format("opentype");
+src: url('../Fonts/Baron-Neue.otf') format("opentype");
 }
 .menu-burger{
 display: none;
